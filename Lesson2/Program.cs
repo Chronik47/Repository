@@ -76,3 +76,74 @@
 // Console.Write("Введите число: ");
 // int number = Convert.ToInt32(Console.ReadLine());
 // CubicNumbers(number);
+
+
+
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// 3, 5 -> 243 (3⁵)
+
+// 2, 4 -> 16
+
+// Console.Write("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите степень: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+
+//     double n = Math.Pow(a, b);
+// Console.WriteLine("Число " + n);
+
+
+
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+// 452 -> 11
+
+// 82 -> 10
+
+// 9012 -> 12
+
+// Console.WriteLine("введите число");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
+
+// while (number > 0)
+// {
+// int ostatok = number % 10;
+// number = number / 10;
+// sum = sum + ostatok;
+// }
+// Console.WriteLine("сумма всех цифр в числе равна: " + sum);
+
+
+// Задача 29: Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
+
+// m = 5 -> [1, 2, 5, 7, 19]
+
+// m = 3 -> [6, 1, 33]
+
+// int[] CreateRandomArray()
+// {
+//     Console.Write("Введите длину создаваемого массива: ");
+//     int size = Convert.ToInt32(Console.ReadLine());
+//     int[] array = new int[size];
+
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.Write($"Введите данные {i + 1} элемента массива: ");
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//         Console.Write(array[i] + " ");
+
+//     Console.WriteLine();
+// }
+
+// int[] myArray = CreateRandomArray();
+// ShowArray(myArray);
