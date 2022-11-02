@@ -124,7 +124,7 @@
 
 // m = 3 -> [6, 1, 33]
 
-// int[] CreateRandomArray()
+// int[] CreateArray()
 // {
 //     Console.Write("Введите длину создаваемого массива: ");
 //     int size = Convert.ToInt32(Console.ReadLine());
@@ -145,5 +145,175 @@
 //     Console.WriteLine();
 // }
 
-// int[] myArray = CreateRandomArray();
+// int[] myArray = CreateArray();
 // ShowArray(myArray);
+
+
+// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
+// [345, 897, 568, 234] -> 2
+
+// int[] CreateArray(int size)
+// {
+//     int[] array = new int[size];
+//     Console.WriteLine("Creating array: ");
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.Write($"Input a {i + 1} element of array: ");
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     Console.WriteLine("Complete!");
+//     return array;
+// }
+
+
+// int[] CreateRandomArray(int size, int minValue, int maxValue)
+// {
+//     int[] array = new int[size];
+
+//     for(int i = 0; i < size; i++)
+//         array[i] = new Random().Next(minValue, maxValue + 1);
+
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//         Console.Write(array[i] + " ");
+
+//     Console.WriteLine();
+// }
+
+// int AmountEvenNumbers(int[] array)
+// {
+//     int count = 0;
+
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] % 2 == 0)
+//             count++;
+//     }
+//     return count;
+// }
+
+// Console.Write("Введите количество элементов: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите min возможное значение: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите max возможное значение: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRandomArray(size, min, max);
+// ShowArray(myArray);
+
+// int result = AmountEvenNumbers(myArray);
+// Console.WriteLine($"Количество четных элементов " + result);
+
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+// [3, 7, 23, 12] -> 19
+
+// [-4, -6, 89, 6] -> 0
+
+// int[] CreateArray(int size)
+// {
+//     int[] array = new int[size];
+//     Console.WriteLine("Creating array: ");
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.Write($"Input a {i + 1} element of array: ");
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     Console.WriteLine("Complete!");
+//     return array;
+// }
+
+
+// int[] CreateRandomArray(int size, int minValue, int maxValue)
+// {
+//     int[] array = new int[size];
+
+//     for(int i = 0; i < size; i++)
+//         array[i] = new Random().Next(minValue, maxValue + 1);
+
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//         Console.Write(array[i] + " ");
+
+//     Console.WriteLine();
+// }
+
+// int SumOddPositions(int[] array)
+// {   
+//     int sum = 0;
+//     for(int i = 1; i < array.Length; i+=2)
+//         sum += array[i];
+
+//     return sum;
+// }
+
+// Console.Write("Введите количество элементов: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите min возможное значение: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите max возможное значение: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = CreateRandomArray(size, min, max);
+// ShowArray(myArray);
+
+// int result = SumOddPositions(myArray);
+// Console.WriteLine($"Сумма элементов на нечётных позициях " + result);
+
+
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+// [3 7 22 2 78] -> 76
+
+
+// double[] CreateArray()
+// {
+//     Console.Write("Введите длину создаваемого массива: ");
+//     int size = Convert.ToInt32(Console.ReadLine());
+//     double[] array = new double[size];
+
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.Write($"Введите данные {i + 1} элемента массива: ");
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+// void ShowArray(double[] array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//         Console.Write(array[i] + " ");
+
+//     Console.WriteLine();
+// }
+
+// double MaxMinusMin (double[] array)
+// {
+//     double min, max;
+//     min = array[0];
+//     max = array[0];
+//       for(int i = 0; i < array.Length; i++)
+//       {
+//         if(array[i] < min)
+//           min = array[i];
+//         if(array[i] > max)
+//           max = array[i];
+//       }
+//       return max - min;
+// }
+
+// double[] myArray = CreateArray();
+// ShowArray(myArray);
+// double result = MaxMinusMin(myArray);
+// Console.WriteLine("Разница между минимальным и максимальным равна " + result);
