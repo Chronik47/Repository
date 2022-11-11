@@ -277,43 +277,43 @@
 // [3 7 22 2 78] -> 76
 
 
-// double[] CreateArray()
-// {
-//     Console.Write("Введите длину создаваемого массива: ");
-//     int size = Convert.ToInt32(Console.ReadLine());
-//     double[] array = new double[size];
+double[] CreateArray()
+{
+    Console.Write("Введите длину создаваемого массива: ");
+    int size = Convert.ToInt32(Console.ReadLine());
+    double[] array = new double[size];
 
-//     for(int i = 0; i < size; i++)
-//     {
-//         Console.Write($"Введите данные {i + 1} элемента массива: ");
-//         array[i] = Convert.ToInt32(Console.ReadLine());
-//     }
-//     return array;
-// }
-// void ShowArray(double[] array)
-// {
-//     for(int i = 0; i < array.Length; i++)
-//         Console.Write(array[i] + " ");
+    for(int i = 0; i < size; i++)
+    {
+        Console.Write($"Введите данные {i + 1} элемента массива: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return array;
+}
+void ShowArray(double[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
 
-//     Console.WriteLine();
-// }
+    Console.WriteLine();
+}
 
-// double MaxMinusMin (double[] array)
-// {
-//     double min, max;
-//     min = array[0];
-//     max = array[0];
-//       for(int i = 0; i < array.Length; i++)
-//       {
-//         if(array[i] < min)
-//           min = array[i];
-//         if(array[i] > max)
-//           max = array[i];
-//       }
-//       return max - min;
-// }
+double MaxMinusMin (double[] array)
+{
+    double min, max;
+    min = array[0];
+    max = array[0];
+      for(int i = 0; i < array.Length; i++)
+      {
+        if(array[i] < min)
+          min = array[i];
+        if(array[i] > max)
+          max = array[i];
+      }
+      return max - min;
+}
 
-// double[] myArray = CreateArray();
-// ShowArray(myArray);
-// double result = MaxMinusMin(myArray);
-// Console.WriteLine("Разница между минимальным и максимальным равна " + result);
+double[] myArray = CreateArray();
+ShowArray(myArray);
+double result = MaxMinusMin(myArray);
+Console.WriteLine("Разница между минимальным и максимальным равна " + result);
