@@ -329,17 +329,18 @@
 // 8 4 2 4
 
 // 1 7 -> числа с такими индексами в массиве нет
+// 
+Console.Write("Введите количество строк в массиве: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите количество столбцов в массиве: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите минимальное число: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите максимальное число: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
 
-int[,] CreateRandom2dArray()
+int[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue)
 {
-    Console.Write("Введите количество строк в массиве: ");
-    int rows = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите количество столбцов в массиве: ");
-    int columns = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите минимальное число: ");
-    int minValue = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите максимальное число: ");
-    int maxValue = Convert.ToInt32(Console.ReadLine());
 
     int[,] array = new int[rows,columns];
 
@@ -359,39 +360,37 @@ int[,] CreateRandom2dArray()
         Console.WriteLine();
     }
  }
+Console.Write("Введите номер строки: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите номер столбца: ");
+int m = Convert.ToInt32(Console.ReadLine());
 
- void ElementValue(int[,] array)
+void ElementValue(int[,] array, int n, int m)
  {
-    Console.Write("Введите номер строки: ");
-    int n = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите номер столбца: ");
-    int m = Convert.ToInt32(Console.ReadLine());
+
     for(int i = 0; i < array.GetLength(0); i++)
     {
         for(int j = 0; j < array.GetLength(1); j++)
         {
             if(i == n && j == m)
             Console.WriteLine("Значение этого элемента " + array[i,j]);
-        
-            
-            else Console.WriteLine("Такого элемента нет ");
 
         }
     } 
 }  
- void ElementValue(int[,] array)
+ void ElementneValue(int[,] array)
  {
     
     for(int i = 0; i < array.GetLength(0); i++)
     {
         for(int j = 0; j < array.GetLength(1); j++)
         {
-            if(i == n && j == m)
-            Console.WriteLine("Значение этого элемента " + array[i,j]);
-    
+            if(i < n && j < m)
+            Console.WriteLine("Элемента нет");
         }
     }
  }
 int[,] myArray = CreateRandom2dArray();
 Show2dArray(myArray);
 ElementValue(myArray);
+ElementneValue(myArray);
